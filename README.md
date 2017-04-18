@@ -54,7 +54,7 @@ I would like to see my current balance immediately after each transaction.
 | Objects       | Messages          |
 | ------------- | --------------    |
 | User          |                   |
-| Account       | current_balance   |
+| Account       | balance           |
 | Transactions  | date              |
 |               | deposit/withdrawal|
 | Statement     | print_statement   |
