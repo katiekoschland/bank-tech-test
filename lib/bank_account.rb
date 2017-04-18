@@ -11,6 +11,7 @@ attr_reader :balance
   end
 
   def withdrawal(amount)
+    fail 'Insufficient funds to complete this transaction' if balance - amount < 0
     @balance -= amount
   end
 
