@@ -2,8 +2,10 @@ class BankAccount
 
 attr_reader :balance
 
-  def initialize(balance)
-    @balance = balance
+DEFAULT_BALANCE = 0
+
+  def initialize(initial_balance = DEFAULT_BALANCE)
+    @balance = initial_balance
   end
 
   def deposit(amount)
@@ -11,7 +13,7 @@ attr_reader :balance
   end
 
   def withdrawal(amount)
-    fail 'Insufficient funds to complete this transaction' if balance - amount < 0
+    fail 'Insufficient funds to complete this transaction' if amount > @balance
     @balance -= amount
   end
 
