@@ -29,4 +29,14 @@ describe '#withdrawal' do
     expect{ bank_account.withdrawal(15) }.to raise_error('Insufficient funds to complete this transaction')
   end
 end
+
+describe '#current_balance' do
+  before do
+    bank_account.deposit(100)
+  end
+
+  it 'prints the user\s current balance' do
+    expect(bank_account.current_balance).to eq("Your balance is £100")
+  end
+end
 end

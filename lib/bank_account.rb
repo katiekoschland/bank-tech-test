@@ -17,4 +17,8 @@ DEFAULT_BALANCE = 0
     @balance -= amount
   end
 
+  def current_balance
+    "Your balance is £#{@balance}"
+  end
+
 end
