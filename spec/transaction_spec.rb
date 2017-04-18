@@ -1,8 +1,12 @@
 require 'transaction'
 
 describe Transaction do
-let(:transaction){Transaction.new}
-it 'can make a new transaction' do
-  expect(transaction).to be_instance_of(Transaction)
-end
+  let(:transaction){Transaction.new(20)}
+
+  describe 'initialize' do
+    it 'the transaction has an amount' do
+      expect(transaction.amount).to eq(20)
+    end
+  end
+
 end
