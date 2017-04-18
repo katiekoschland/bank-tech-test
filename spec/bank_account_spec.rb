@@ -21,7 +21,7 @@ describe '#withdrawal' do
     bank_account.deposit(10)
   end
 
-  it 'decreases account balance by the value of the withdrawal' do
+  it 'decreases account balance by the amount of the withdrawal' do
     expect{ bank_account.withdrawal(5) }.to change{ bank_account.balance }.by -5
   end
 
