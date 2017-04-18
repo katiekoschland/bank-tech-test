@@ -8,4 +8,5 @@ describe TransactionList do
       expect(transaction_list.transactions).to be_empty
     end
   end
+
 end
