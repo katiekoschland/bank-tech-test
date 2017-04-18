@@ -58,3 +58,14 @@ I would like to see my current balance immediately after each transaction.
 | Transactions  | date              |
 |               | deposit/withdrawal|
 | Statement     | print_statement   |
+
+### Installation
+
+
+* clone this repo: https://github.com/katiekoschland/bank-tech-test
+* cd to bank-tech-test
+* Run bundle install
+
+### Testing
+
+* Run rspec
