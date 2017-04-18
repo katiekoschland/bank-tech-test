@@ -11,3 +11,20 @@ describe BankAccount do
     expect(bank_account.balance).to eq(0)
   end
 end
+
+
+describe '#deposit' do
+  let(:bank_account) {BankAccount.new(10)}
+
+  it 'increases account balance by the value of the deposit' do
+    expect{ bank_account.deposit(10) }.to change{ bank_account.balance }.by 10
+  end
+end
+
+describe '#withdrawal' do
+  let(:bank_account) {BankAccount.new(10)}
+
+  it 'decreases account balance by the value of the withdrawal' do
+    expect{ bank_account.withdrawal(5) }.to change{ bank_account.balance }.by -5
+  end
+end

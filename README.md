@@ -65,6 +65,7 @@ I would like to see my current balance immediately after each transaction.
 * clone this repo: https://github.com/katiekoschland/bank-tech-test
 * cd to bank-tech-test
 * Run bundle install
+* Run irb to interact with this application
 
 ### Testing
 
