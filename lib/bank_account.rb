@@ -8,15 +8,18 @@ DEFAULT_BALANCE = 0
 
   def initialize(initial_balance = DEFAULT_BALANCE)
     @balance = initial_balance
+    @transaction_list = TransactionList.new
   end
 
   def deposit(amount)
     @balance += amount
+    @transaction_list.create(amount, balance)
   end
 
   def withdrawal(amount)
     fail 'Insufficient funds to complete this transaction' if amount > @balance
     @balance -= amount
+    @transaction_list.create(amount, balance)
   end
 
   def current_balance
