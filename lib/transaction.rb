@@ -18,4 +18,5 @@ class Transaction
     @amount = amount
   end
 
+
 end
