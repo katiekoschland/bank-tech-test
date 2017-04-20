@@ -13,7 +13,7 @@ describe TransactionList do
 
   describe '#initialize' do
     it 'initializes with an empty array' do
-      expect(transaction_list.transaction_history).to be_empty
+      expect(transaction_list.transactions).to be_empty
     end
   end
 
@@ -21,17 +21,17 @@ describe TransactionList do
 
     it 'stores a transactions amount' do
       transaction_list.create(50, 1000)
-      expect(transaction_list.transaction_history[0].amount).to eq(50)
+      expect(transaction_list.transactions.keys[0].amount).to eq(50)
     end
 
     it 'stores the ccurrent balance' do
       transaction_list.create(50, 1000)
-      expect(transaction_list.transaction_history[0].balance).to eq(1000)
+      expect(transaction_list.transactions.values[0]).to eq(1000)
     end
 
     it 'creates a transaction' do
       transaction_list.create(50, 1000)
-      expect(transaction_list.transaction_history).to include(transaction)
+      expect(transaction_list.transactions).to include(transaction)
     end
   end
 end
