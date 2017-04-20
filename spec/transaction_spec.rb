@@ -27,3 +27,10 @@ end
       expect(transaction.transaction_type).to be(:debit)
     end
   end
+
+  describe '#amount' do
+    let(:transaction){ Transaction.new(0, "14-01-2014") }
+    it 'raises an error if transaction amount is zero' do
+      expect{transaction}.to raise_error("Transaction amount cannot be zero")
+    end
+  end
