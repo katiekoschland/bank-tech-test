@@ -1,3 +1,5 @@
+require_relative 'transaction_list'
+
 class BankAccount
 
 attr_reader :balance

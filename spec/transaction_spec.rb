@@ -34,3 +34,9 @@ end
       expect{transaction}.to raise_error("Transaction amount cannot be zero")
     end
   end
+
+  describe '#NaN'do
+    it 'raises an error if the transaction amount is NaN' do
+      expect{ Transaction.new( 'test' ,"14-01-2014") }.to raise_error("Transaction amount must be a number")
+    end
+  end
