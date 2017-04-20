@@ -65,7 +65,31 @@ I would like to see my current balance immediately after each transaction.
 * clone this repo: https://github.com/katiekoschland/bank-tech-test
 * cd to bank-tech-test
 * Run bundle install
-* Run irb to interact with this application
+
+
+### Interaction with irb:
+```
+
+$ irb
+2.4.0 :001 > require './lib/transaction.rb'
+  => true
+2.4.0 :002 > require './lib/bank_account.rb'
+  => true
+2.4.0 :003 > require './lib/transaction_list.rb'
+  => true
+2.4.0 :004 > require './lib/print_statement.rb'
+  => true
+2.4.0 :005 > transaction_list = TransactionList.new
+  => #<TransactionList:0x007f8df9056a20 @transactions={}, @transaction_class=Transaction>
+2.4.0 :006 > bank = BankAccount.new(transaction_list)
+  => #<BankAccount:0x007f8df90364a0 @balance=0, @transaction_list=#<TransactionList:0x007f8df9056a20 @transactions={}, @transaction_class=Transaction>>
+2.4.0 :007 > bank.deposit(2000)
+  => 2000
+2.4.0 :008 > bank.withdraw(100)
+  => 1900
+2.4.0 :009 > bank.current_balance
+=> "Your balance is £1900"
+```
 
 ### Testing
 
