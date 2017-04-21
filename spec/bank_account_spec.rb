@@ -22,11 +22,11 @@ describe '#withdrawal' do
   end
 
   it 'decreases account balance by the amount of the withdrawal' do
-    expect{ bank_account.withdrawal(5) }.to change{ bank_account.balance }.by -5
+    expect{ bank_account.withdraw(5) }.to change{ bank_account.balance }.by -5
   end
 
   it 'raises an error if the withdrawal amount exceeds the user\'s current balance' do
-    expect{ bank_account.withdrawal(15) }.to raise_error('Insufficient funds to complete this transaction')
+    expect{ bank_account.withdraw(15) }.to raise_error('Insufficient funds to complete this transaction')
   end
 end
 

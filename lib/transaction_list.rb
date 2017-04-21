@@ -1,4 +1,4 @@
-require 'transaction'
+require_relative 'transaction'
 
 class TransactionList
   attr_reader :transactions
@@ -11,8 +11,6 @@ class TransactionList
   def create(amount, balance)
     store(@transaction_class.new(amount), balance)
   end
-
-  private
 
   def store(transaction, balance)
     @transactions[transaction] = balance

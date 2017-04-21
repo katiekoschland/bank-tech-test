@@ -16,7 +16,7 @@ DEFAULT_BALANCE = 0
     @transaction_list.create(amount, balance)
   end
 
-  def withdrawal(amount)
+  def withdraw(amount)
     fail 'Insufficient funds to complete this transaction' if amount > @balance
     @balance -= amount
     @transaction_list.create(amount, balance)
