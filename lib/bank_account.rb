@@ -6,8 +6,8 @@ attr_reader :balance
 
 DEFAULT_BALANCE = 0
 
-  def initialize(initial_balance = DEFAULT_BALANCE)
-    @balance = initial_balance
+  def initialize(transaction_list = TransactionList.new, balance = DEFAULT_BALANCE)
+    @balance = balance
     @transaction_list = TransactionList.new
   end
 
